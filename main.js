@@ -15,7 +15,7 @@ console.log("Resultado S = " + serieS(6));
 function serieE(limit) {
   let e = 0;
   for (let i = 0; i < limit; i++) {
-    console.log("1/" + i + "!");
+    console.log("1/" + i + "! +");
     e = e + 1 / fac(i);
   }
   return e;
@@ -29,4 +29,4 @@ function fac(factorial) {
   return facReal;
 }
 
-console.log(serieE(2));
+console.log("Resultado e = " + serieE(10));
