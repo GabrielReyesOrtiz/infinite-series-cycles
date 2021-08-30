@@ -1,9 +1,8 @@
 function serieS(limit) {
-  let sum = 4 - 4 / 3;
-  let i = 5;
-  let j = 7;
+  let sum = 0;
+  let i = 1;
+  let j = 3;
 
-  console.log("4 - 4/3");
   for (let a = 0; a < limit; i += 4, j += 4, a++) {
     console.log(" + 4/", i, " - 4/", j);
     sum += 4 / i - 4 / j;
@@ -11,4 +10,23 @@ function serieS(limit) {
   return sum;
 }
 
-console.log(serieS(5));
+console.log("Resultado S = " + serieS(6));
+//-------------------------------------------------------------------------
+function serieE(limit) {
+  let e = 0;
+  for (let i = 0; i < limit; i++) {
+    console.log("1/" + i + "!");
+    e = e + 1 / fac(i);
+  }
+  return e;
+}
+
+function fac(factorial) {
+  let facReal = 1;
+  for (let i = factorial; i >= 1; i--) {
+    facReal = facReal * i;
+  }
+  return facReal;
+}
+
+console.log(serieE(2));
